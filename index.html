@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lamg="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body,html{
+    margin:0;
+    padding:0;
+    height:100%;
+    background-color: black;
+}
+.container{
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: black;
+}
+.box{
+    background-color: grey;
+    text-align:center;
+    border-radius:50px;
+    border:2px solid gold;
+    padding:100px;
+    width:30%;
+}
+h2{
+    color:rgb(18, 17, 17);
+    font-size: 30px;
+    text-align: center;
+}
+textarea{
+    width:100%;
+}
+        </style>
+    </head>
+    <body>
+       
+        <div class="container">
+            <div class="box">
+                <h2>Characters Counter</h2>
+                <textarea id="inputtext" placeholder="Enter text here"></textarea>
+                <p>Character:<span id="count">0</span></p>
+            </div>
+        </div>
+        <script>
+            let inputtext=document.getElementById('inputtext');
+let count=document.getElementById('count');
+inputtext.addEventListener ('input',()=>{
+    count.innerText=inputtext.value.length;
+})
+        </script>
+    </body>
+</html>
+
+
